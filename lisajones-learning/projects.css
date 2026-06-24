@@ -1,0 +1,733 @@
+/* ============================================================
+   PROJECTS.CSS
+   Styles for: ai-accessibility.html, schema-compass.html,
+               ux-wireframes.html (all case study pages)
+   Shared globals: reset, body, nav, switcher, footer
+   are inherited from hub.css — link BOTH files on case study pages.
+   Styles are ordered as they appear working down the page.
+   ============================================================ */
+
+
+/* RESET & BASE
+   (duplicated here so case study pages work standalone)
+------------------------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+
+/* NAV
+------------------------------------------------------------ */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo img {
+  height: 36px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #1a1a1a;
+}
+
+nav .nav-links a:hover {
+  color: #371843;
+}
+
+
+/* DISCIPLINE SWITCHER
+------------------------------------------------------------ */
+.switcher {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 28px 0 0;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.switcher a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #888;
+  padding: 10px 24px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.switcher a.active {
+  color: #371843;
+  border-bottom-color: #371843;
+}
+
+
+/* HERO
+------------------------------------------------------------ */
+.hero {
+  background: #371843;
+  color: #fff;
+  padding: 80px 48px 40px;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  max-width: 680px;
+  margin-bottom: 36px;
+  padding-bottom: 60px;
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.hero-meta-item .label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hero-meta-item .value {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+}
+
+
+/* CTA BAND (below hero)
+------------------------------------------------------------ */
+.cta-band {
+  background: #F0EFED;
+  padding: 28px 48px;
+}
+
+.cta-band-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.cta-band-note {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  flex: 1;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.cta-band-btn {
+  display: inline-block;
+  background: #371843;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 28px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cta-band-btn:hover {
+  background: #4a2360;
+}
+
+
+/* CONTENT SECTIONS
+------------------------------------------------------------ */
+.section {
+  padding: 50px 48px 48px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.section h2 {
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  color: #1a1a1a;
+}
+
+.section p {
+  margin-bottom: 18px;
+  color: #000;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #e8e8e8;
+  margin: 0 48px;
+}
+
+.section-grey {
+  background: #F0EFED;
+  padding: 72px 48px;
+}
+
+.section-grey .section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* LEARNER PERSONA
+------------------------------------------------------------ */
+.persona-img-full {
+  margin: 36px 0 0;
+  overflow: hidden;
+}
+
+.persona-img-full img {
+  width: 100%;
+  display: block;
+}
+
+.persona-caption {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+
+/* PROGRAM FLOW (module overview strip)
+------------------------------------------------------------ */
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0;
+  margin: 36px 0 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.flow-step {
+  padding: 24px 20px;
+  border-right: 1px solid #ddd;
+  text-align: center;
+}
+
+.flow-step:last-child {
+  border-right: none;
+}
+
+.flow-step.active {
+  background: #371843;
+}
+
+.flow-step .step-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: #371843;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.flow-step.active .step-num {
+  color: #fff;
+}
+
+.flow-step .step-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.flow-step.active .step-name {
+  color: rgba(255,255,255,0.9);
+}
+
+.flow-step .step-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.flow-step.active .step-desc {
+  color: rgba(255,255,255,0.65);
+}
+
+.flow-caption {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.flow-caption strong {
+  font-style: normal;
+}
+
+
+/* MODULE CARDS
+------------------------------------------------------------ */
+.module-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0 0;
+}
+
+.module-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.module-card.active {
+  background: #371843;
+  border-color: #371843;
+}
+
+.module-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.module-card.active .module-card-label {
+  color: rgba(255,255,255,0.55);
+}
+
+.module-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.module-card.active h3 {
+  color: #fff;
+}
+
+.module-card p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.module-card.active p {
+  color: rgba(255,255,255,0.65);
+}
+
+
+/* CALLOUT BOXES
+------------------------------------------------------------ */
+.callout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.callout {
+  border-left: 4px solid #371843;
+  background: #F0EFED;
+  padding: 24px 28px;
+}
+
+.callout .callout-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #371843;
+  margin-bottom: 8px;
+}
+
+.callout .callout-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.callout p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 0;
+}
+
+
+/* RUBRIC ACCORDIONS
+------------------------------------------------------------ */
+details.lj-rubric {
+  margin: 12px 0;
+  border: 1px solid #E0DDD8;
+  overflow: hidden;
+}
+
+summary.lj-rubric-summary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  padding: 14px 18px;
+  cursor: pointer;
+  background: #fff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+summary.lj-rubric-summary::-webkit-details-marker {
+  display: none;
+}
+
+summary.lj-rubric-summary::after {
+  content: "+";
+  font-size: 22px;
+  color: #1a1a1a;
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+details[open] summary.lj-rubric-summary::after {
+  content: "2";
+}
+
+.lj-rubric-body {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lj-rubric-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 480px;
+}
+
+.lj-rubric-body th {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.lj-rubric-body th:first-child {
+  width: 120px;
+}
+
+.lj-rubric-body td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0ddd8;
+  vertical-align: top;
+  color: #555;
+  line-height: 1.5;
+}
+
+.lj-rubric-body tr:last-child td {
+  border-bottom: none;
+}
+
+.lj-rubric-body tr:nth-child(even) td {
+  background: #F7F5F1;
+}
+
+.lj-rubric-body td:first-child {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.col-ex {
+  color: #1A6B6B;
+}
+
+.col-ni {
+  color: #8B6914;
+}
+
+.col-ua {
+  color: #CC2200;
+}
+
+
+/* NUMBERED PROCESS STEPS
+------------------------------------------------------------ */
+.process-steps {
+  margin-top: 8px;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid #e8e8e8;
+  align-items: start;
+}
+
+.process-step:last-child {
+  border-bottom: none;
+}
+
+.process-step .num {
+  font-size: 28px;
+  font-weight: 700;
+  color: #371843;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.process-step h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.process-step p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 0;
+}
+
+
+/* MIRO EMBED
+------------------------------------------------------------ */
+.miro-wrap {
+  margin: 28px 0 8px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+}
+
+.miro-wrap iframe {
+  display: block;
+  width: 100%;
+}
+
+.miro-caption {
+  font-size: 13px;
+  color: #666;
+  padding: 12px 16px;
+  background: #F0EFED;
+  font-style: italic;
+}
+
+
+/* SME / DARK CALLOUT
+------------------------------------------------------------ */
+.sme-callout {
+  background: #371843;
+  color: #fff;
+  padding: 36px 40px;
+  margin-top: 40px;
+}
+
+.sme-callout h3 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
+}
+
+.sme-callout p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+
+/* LAUNCH BAND
+------------------------------------------------------------ */
+.launch-band {
+  background: #371843;
+  padding: 56px 48px;
+  text-align: center;
+  color: #fff;
+}
+
+.launch-band p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 24px;
+}
+
+.launch-band a {
+  display: inline-block;
+  background: #fff;
+  color: #371843;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 32px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.launch-band a:hover {
+  background: #f0e8f5;
+}
+
+
+/* FOOTER
+------------------------------------------------------------ */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 56px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+footer h3 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 16px;
+}
+
+footer p,
+footer a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  line-height: 1.7;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+
+/* MEDIA QUERIES
+------------------------------------------------------------ */
+@media (max-width: 680px) {
+  .cta-band {
+    padding: 24px 20px;
+  }
+
+  .cta-band-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    padding: 16px 20px;
+  }
+
+  .hero {
+    padding: 56px 20px 48px;
+  }
+
+  .section {
+    padding: 52px 20px;
+  }
+
+  .section-grey {
+    padding: 52px 20px;
+  }
+
+  .section-divider {
+    margin: 0 20px;
+  }
+
+  .flow-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flow-step {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .launch-band {
+    padding: 48px 20px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+}

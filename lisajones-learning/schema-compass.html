@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lisa Jones . Schema Compass</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="projects.css">
+  <link rel="icon" href="images/favicon-day.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="images/favicon-night.png" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="https://www.lisajones.com.au/">
+      <img src="https://images.squarespace-cdn.com/content/v1/6784d1c0ab6ad30de6a0cd52/87909bb6-3598-4449-be41-529e9225beb0/LJ_logo.png?format=1500w" alt="Lisa Jones">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://www.lisajones.com.au/about">About</a></li>
+    <li><a href="https://www.lisajones.com.au/">Work</a></li>
+    <li><a href="https://www.lisajones.com.au/contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="switcher">
+  <a href="https://www.lisajones.com.au/">UX / Product Design</a>
+  <a href="index.html" class="active">Learning Design</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Designing a conversational learning experience for complex psychological concepts</h1>
+    <p>Schema Compass uses guided conversation to help adults apply schema therapy concepts to their own experience. Mira the cat leads learners through emotions, triggers, schemas, unmet needs, and a practical coping skill . one stage at a time.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="label">Audience</span>
+        <span class="value">Adults exploring schema therapy concepts</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Tools</span>
+        <span class="value">Voiceflow, instructional design, conversational UX</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Role</span>
+        <span class="value">Sole designer and developer</span>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<div class="section">
+  <p class="section-label">The Problem</p>
+  <h2>Schema therapy is a well-evidenced framework with an access problem.</h2>
+  <p class="lead">Workbooks, questionnaires, and academic texts are written for clinicians. For most adults wanting to understand their own patterns, the complexity is a barrier before the learning begins.</p>
+  <p>The design problem was not about simplifying the content. It was about finding a format that could scaffold complex, emotionally engaged learning without a therapist in the room.</p>
+
+  <div class="callout" style="margin-top: 24px;">
+    <div class="callout-label">Design brief</div>
+    <div class="callout-title">How might we guide reflective adults through schema therapy concepts . so that they can recognise their own patterns and apply practical coping skills . without needing a therapist present?</div>
+  </div>
+
+  <div class="outcomes-box">
+    <div class="ob-label">Learning objectives</div>
+    <ol>
+      <li>Identify and name an emotion and connect it to a situational trigger.</li>
+      <li>Apply schema therapy concepts to a personal example to recognise which schema is active.</li>
+      <li>Explain the unmet need associated with their identified schema.</li>
+      <li>Select and apply a practical coping skill matched to their schema and emotional state.</li>
+    </ol>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- WHY CONVERSATIONAL -->
+<div class="section-grey">
+  <div class="section-inner">
+    <p class="section-label">Design Rationale</p>
+    <h2>Why conversational learning?</h2>
+    <p class="lead">Schema therapy is about applying a framework to lived experience . not memorising a taxonomy. That requires reflection, personalisation, and guided questioning. A chatbot can provide all three. A static resource cannot.</p>
+
+    <div class="theory-grid">
+      <div class="theory-card">
+        <div class="tc-principle">Scaffolded progression</div>
+        <p>Each stage builds on the previous one. Complexity is introduced only after the prior concept is grounded in personal experience.</p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-principle">Chunking</div>
+        <p>Each exchange covers one concept. Short steps reduce cognitive load and prevent the overwhelm that makes dense schema resources inaccessible.</p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-principle">Situated learning</div>
+        <p>Learners apply concepts to their own emotions and experiences . not a hypothetical scenario . which increases relevance and supports transfer.</p>
+      </div>
+      <div class="theory-card">
+        <div class="tc-principle">Guided discovery</div>
+        <p>Rather than defining schemas and asking for recall, the conversation guides learners to identify their own schema through questioning. Insight is arrived at, not delivered.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- THE SOLUTION -->
+<div class="section">
+  <p class="section-label">The Solution</p>
+  <h2>A five-stage structured learning sequence</h2>
+  <p class="lead">Each stage mirrors the therapeutic process and corresponds to a learning objective. Learners do not read about schemas . they apply the framework to their own experience as the content unfolds.</p>
+
+  <img src="images/schema-flow.jpg" alt="Schema Compass conversation flow diagram showing the full Voiceflow architecture from start through five stages to end" class="artefact-img">
+  <p class="img-caption"><strong>Conversation flow.</strong> Full Voiceflow architecture mapped before content development began. Every path resolves . no dead ends.</p>
+
+  <div class="screenshots">
+    <div>
+      <img src="images/chatbot-1.png" alt="Opening screen. Mira introduces herself and asks whether the learner would like to explore their feelings.">
+      <p class="sc-caption"><strong>Welcome.</strong> Mira sets tone and purpose before schema content is introduced.</p>
+    </div>
+    <div>
+      <img src="images/chatbot-2.png" alt="Trigger identification. After selecting Anxious, the learner is offered three trigger options as choice buttons.">
+      <p class="sc-caption"><strong>Stage 2: Triggers.</strong> Emotion selection routes to contextually matched trigger options.</p>
+    </div>
+    <div>
+      <img src="images/chatbot-3.png" alt="Skill delivery showing the Grounding technique with a photograph and numbered steps.">
+      <p class="sc-caption"><strong>Stage 5: Skills.</strong> Each skill includes a photograph and steps the learner can use immediately.</p>
+    </div>
+  </div>
+
+  <div class="a11y-callout">
+    <h3>Accessibility decisions</h3>
+    <ul>
+      <li>Choice buttons throughout . no free text input, removing typing barriers and supporting users with low literacy or motor difficulties.</li>
+      <li>Voice playback added after user testing . learners can listen rather than read.</li>
+      <li>Single-character name input allowed . removes the friction point that blocked some users from starting.</li>
+      <li>Short text per screen . plain language and chunked delivery reduce cognitive load.</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- KEY DESIGN DECISIONS -->
+<div class="section-grey">
+  <div class="section-inner">
+    <p class="section-label">Key Design Decisions</p>
+    <h2>Choices that shaped the learning experience</h2>
+
+    <div class="callout">
+      <div class="callout-label">Decision 1</div>
+      <div class="callout-title">Learning sequence derived from the therapeutic process, not imposed on it</div>
+      <p>The five stages follow the same order as the schema therapy framework because the concepts depend on each other. You cannot name a schema without first grounding it in an emotion and a trigger. The sequence is the pedagogy . each stage is a prerequisite for the next.</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Decision 2</div>
+      <div class="callout-title">Choice buttons instead of free text . for learning reasons as well as UX reasons</div>
+      <p>Free text would require learners to already know the vocabulary of schema therapy. Buttons reframe the task to recognition rather than recall . a lower-demand cognitive task at the right point in the sequence. They also ensure every path reaches a coping skill, the actual learning outcome.</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Decision 3</div>
+      <div class="callout-title">A character guide rather than a system voice</div>
+      <p>Mira creates tonal distance from clinical authority, making the experience feel exploratory rather than diagnostic. The learning task requires examining uncomfortable patterns . learners are more likely to do that in a context that feels curious rather than evaluative. User testing confirmed the voice landed as intended.</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Decision 4</div>
+      <div class="callout-title">The skill is the deliverable, not the insight</div>
+      <p>Each conversation path ends with a coping skill matched to the schema and emotion the learner identified . with step-by-step instructions and a photograph. This is the transfer moment. Without it, the session is reflection without application.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- DESIGN PROCESS -->
+<div class="section">
+  <p class="section-label">Design Process</p>
+  <h2>How Schema Compass was built</h2>
+
+  <div class="process-step">
+    <span class="num">1</span>
+    <div>
+      <h3>Domain analysis and content architecture</h3>
+      <p>All 20 schemas mapped from primary sources across 5 domains . each with unmet needs, maladaptive beliefs, schema modes, healthy adult responses, and linked skills. Fourteen coping skills documented with step-by-step instructions. This reference system became the architecture for the branching logic before any Voiceflow build began.</p>
+    </div>
+  </div>
+
+  <div class="process-step">
+    <span class="num">2</span>
+    <div>
+      <h3>Design brief</h3>
+      <p>A "How might we" brief framed the problem before solution development. Learning objectives were developed from the brief to define what success looks like for a learner completing the experience.</p>
+      <img src="images/how-might-we.png" alt="How might we brief template" class="artefact-img" style="max-width: 420px; margin-top: 16px;">
+    </div>
+  </div>
+
+  <div class="process-step">
+    <span class="num">3</span>
+    <div>
+      <h3>Conversation flow mapping</h3>
+      <p>Full architecture mapped in Voiceflow before any content was written. Every path reviewed for dead ends. The goal: no learner path terminates without reaching a skill.</p>
+    </div>
+  </div>
+
+  <div class="process-step">
+    <span class="num">4</span>
+    <div>
+      <h3>Content writing in Mira's voice</h3>
+      <p>Every response written in plain language . warm, direct, non-clinical. Skill content written for immediate practical use, with numbered steps rather than abstract guidance.</p>
+    </div>
+  </div>
+
+  <div class="process-step">
+    <span class="num">5</span>
+    <div>
+      <h3>User testing with five participants including a psychologist</h3>
+      <p>Structured protocol across three phases: before use, immediately after, and on reflection. Two iterations made in response: voice playback added, name input friction removed.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- USER TESTING -->
+<div class="section-grey">
+  <div class="section-inner">
+    <p class="section-label">User Testing</p>
+    <h2>What five testers said</h2>
+
+    <div class="testing-grid">
+      <div class="testing-card">
+        <div class="tc-label">Deb</div>
+        <blockquote>"It was well structured and clear. The cat assistance and lots of question prompts were what I liked most. I would like to see more skills and tools as options."</blockquote>
+      </div>
+      <div class="testing-card">
+        <div class="tc-label">Alan</div>
+        <blockquote>"I can see potential, despite this being a very limited demo. He tried it again with the volume up and said the voice makes it better."</blockquote>
+      </div>
+      <div class="testing-card">
+        <div class="tc-label">Margi</div>
+        <blockquote>"Reasonably clear from the start. Entering my name was what frustrated me most."</blockquote>
+      </div>
+      <div class="testing-card">
+        <div class="tc-label">Allison, psychologist</div>
+        <blockquote>"I felt very guided. The practical strategies were easy to use. Send it to me when it's fully up and running . I'll use it."</blockquote>
+      </div>
+      <div class="testing-card">
+        <div class="tc-label">Patrick</div>
+        <blockquote>"The voice is perfect . trustworthy, without being elite. For schema education and practising different responses I think this app idea is excellent."</blockquote>
+      </div>
+    </div>
+
+    <div class="ratings-wrap">
+      <table class="ratings-table">
+        <thead>
+          <tr>
+            <th>Measure (1–5)</th>
+            <th>Deb</th><th>Alan</th><th>Margi</th><th>Allison</th><th>Patrick</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="metric">Ease of use</td><td>5</td><td>4</td><td>Easy</td><td>5</td><td>5</td></tr>
+          <tr><td class="metric">Helpfulness</td><td>5</td><td>2</td><td>3</td><td>5</td><td>5</td></tr>
+          <tr><td class="metric">Engagement</td><td>5</td><td>2</td><td>2</td><td>4</td><td>5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ratings-note">Alan's lower ratings reflect unmet expectation of broader functionality . consistent with his written feedback that he could see the potential.</p>
+
+    <div class="eval-callout">
+      <div class="callout-label">What a future evaluation would measure . Kirkpatrick Level 2</div>
+      <ul>
+        <li>"I can identify and name a current emotion and connect it to what triggered it."</li>
+        <li>"I could identify one of my own schemas during or after the conversation."</li>
+        <li>"I understand the unmet need connected to my schema."</li>
+        <li>"I learned at least one practical coping skill I could apply immediately."</li>
+      </ul>
+    </div>
+
+    <div class="sme-callout">
+      <h3>Content and clinical framing</h3>
+      <p>Schema Compass is an educational tool, not a therapeutic one. All content was developed from primary sources (Young et al., 2003; Bricker and Young, 2020) and reviewed by a practising psychologist, who confirmed the educational framing was appropriate and expressed intent to recommend the tool to clients for use alongside therapy.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- OUTCOMES -->
+<div class="section">
+  <p class="section-label">Outcomes and Reflection</p>
+  <h2>What was validated and what comes next</h2>
+
+  <div class="outcomes-grid">
+    <div class="outcomes-col">
+      <h3>What testing validated</h3>
+      <ul>
+        <li>Ease of use consistently high across all five participants.</li>
+        <li>Character voice confirmed as appropriate by the psychologist participant.</li>
+        <li>Educational framing validated as suitable for use alongside therapy.</li>
+        <li>Two iterations shipped: voice playback added, name input friction removed.</li>
+      </ul>
+    </div>
+    <div class="outcomes-col">
+      <h3>Next development priorities</h3>
+      <ul>
+        <li>Run a formal Kirkpatrick Level 2 evaluation before any feature work.</li>
+        <li>Expand the coping skills library based on which schemas are most frequently reached.</li>
+        <li>Integrate the YSQ-R as an optional self-assessment entry point.</li>
+        <li>Explore LMS integration for use in psychology training programs.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top: 28px; color: #333;">The most useful critique came from Alan: his expectation of broader functionality identifies the real gap between proof-of-concept and a tool that earns sustained engagement. Testing also revealed a limitation in the evaluation design . close-ended questions limited what participants could tell me about what they had actually learnt. Future testing would add open prompts tied directly to the learning objectives.</p>
+</div>
+
+
+<footer>
+  <div>
+    <h3>Contact</h3>
+    <a href="mailto:lisajonesdesigner@gmail.com">lisajonesdesigner@gmail.com</a>
+    <a href="https://www.linkedin.com/in/lisajonesdesign/">LinkedIn</a>
+  </div>
+  <div>
+    <h3>Quick links</h3>
+    <a href="https://www.lisajones.com.au/">Work</a>
+    <a href="https://www.lisajones.com.au/about">About</a>
+    <a href="index.html" class="active">Learning Design</a>
+    <a href="https://www.lisajones.com.au/contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
